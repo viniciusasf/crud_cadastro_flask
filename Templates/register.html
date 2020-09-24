@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.3/examples/jumbotron-narrow/">
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <title>Cadastro de Usuário</title>
+</head>
+<body>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+       <h1 class="display-3">Cadastro de Usuário</h1>
+       <p class="lead">Cadastro de Usuário</p>
+       <hr>
+        <form action="", method="POST" style="text-align:center">
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label>NOME</label>
+                    <input type="text" class="form-control is-valid" name="nome" placeholder="Nome" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>LOGIN</label>
+                    <input type="text" class="form-control is-valid" name="login" placeholder="Login" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>SENHA</label>
+                    <input type="password" class="form-control is-valid" name="senha" placeholder="*************" required>
+                </div>
+                <div class="display-3">
+                    <button type="submit" class="btn btn-primary">CADASTRAR</button></a>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="{{ url_for('static', filename='js/bootstrap.min.js' )}}"></script>
+</body>
+</html>

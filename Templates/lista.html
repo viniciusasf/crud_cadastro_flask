@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.3/examples/jumbotron-narrow/">
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <title>CADASTRO</title>
+</head>
+<body>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+       <h1 class="display-3">Lista de Pessoas</h1>
+       <p class="lead">Confira a Lista abaixo.</p>
+       <hr>
+       <input class="form-control mr-sm-3" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+        <table class="table" >
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Exclua</th>
+                    <th scope="col">Atualize</th>
+                </tr>
+            </thead>
+                {% for pessoa in pessoas %}
+            <tbody>
+                <tr>
+                    <th scope="row">{{ pessoa._id }}</th>
+                        <td>{{ pessoa.nome }}</td>
+                        <td>{{ pessoa.telefone}}</td>
+                        <td>{{ pessoa.email }}</td>
+                        <td><a href="/excluir/{{ pessoa._id }}">Excluir</a></td>
+                        <td><a href="/atualizar/{{ pessoa._id }}">Atualizar</a></td>
+                </tr>
+                {% endfor %}
+        </table>
+        <a href="{{ url_for('index') }}"><button type="button" class="btn btn-primary">MENU INICIAL</button></a>
+    </div>
+</div>
+<br>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="{{ url_for('static', filename='js/bootstrap.min.js' )}}"></script>
+</body>
+</html>

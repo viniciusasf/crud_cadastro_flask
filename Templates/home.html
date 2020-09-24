@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.3/examples/jumbotron-narrow/">
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <title>LOGIN</title>
+</head>
+<body>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        {% if current_user.is_authenticated %}
+        <h1>VINICIUS FERREIRA</h1>
+       <p>Usuário Logado</p>
+    </div>
+        {% else %}
+    <div class="container">
+        <h1>VISITANTE</h1>
+       <p>Usuário DESLOGADO</p>
+    </div>
+        {% endif %}
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="{{ url_for('static', filename='js/bootstrap.min.js' )}}"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="https://getbootstrap.com/docs/3.3/examples/jumbotron-narrow/">
+        <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <title>MENU INICIAL</title>
+    </head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+           <h1 class="display-3">Menu Inicial</h1>
+           <p class="lead">Escolha as Opções Abaixo</p>
+           <hr>
+           <a href="{{ url_for('cadastro') }}"><button type="button" class="btn btn-primary">CADASTRO</button></a>
+           <a href="{{ url_for('lista') }}"><button type="button" class="btn btn-primary">LISTA</button></a>
+        </div>
+    </div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="{{ url_for('static', filename='js/bootstrap.min.js' )}}"></script>
+</body>
+</html>
